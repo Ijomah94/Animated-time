@@ -1,0 +1,157 @@
+*{
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background: lightseagreen;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+body.dark{
+  background: black;
+  color: white;
+}
+
+
+.side{
+  float: left;
+  padding: 10px;
+  border: 2px solid orangered;
+  width: 15%;
+  margin-top: 5%;
+  height: 60vh;
+  position: sticky;
+}
+
+.side side_nav ul{
+  height: 90%;
+}
+
+.side .side_nav ul li{
+  width: 100%;
+  background: white;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.side_nav li{
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  padding-top: 5px;
+  border-radius: 10px;
+  font-weight: 900;
+  color: aqua;
+}
+
+.side .side_nav li:hover{
+  background: orangered;
+}
+
+.side .side_nav  li.dark{
+  background: gray;
+}
+
+.side .side_nav  li.dark:hover{
+  background: orangered;
+}
+
+.side::before{
+  content: " ";
+  width: 25px;
+  height: 25px;
+  background: orangered;
+  border-radius: 50%;
+  position: absolute;
+  top: 130px;
+  left: 252px;
+
+}
+
+.mode{
+  display: flex;
+  gap: 75px;
+  margin-top: 100px;
+  border: 2px solid orangered;
+  padding: 0.5%;
+  border-radius: 5px;
+}
+
+button{
+  padding: 10px;
+  border: 2px solid orangered;
+  color: orangered;
+  border-radius: 5px;
+}
+
+.side .side_nav ul li.dark{
+  background: gray;
+  color: white;
+}
+
+.middle{
+  width: 50%;
+  height: 100vh;
+  margin-left: 2%;
+  margin-top: 0%;
+  position: relative;
+  border: 2px solid orangered;
+  padding: 2% 4% 2% 4%;
+  display: flex;
+  justify-content: center;
+}
+
+h2{
+  background: orangered;
+  color: aqua;
+  padding: 1%;
+  width: 70%;
+  clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  height: 20px;
+}
+
+
+.right{
+  float: right;
+  padding: 10px;
+  border: 2px solid orangered;
+  width: 15%;
+  margin-top: 5%;
+  height: 60vh;
+  position: sticky;
+}
+
+@media (max-width:600px){
+  h2{
+    font-size: 10px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+  }
+
+  .middle{
+    margin-left: -20px;
+  }
+
+  .side{
+    visibility: hidden;
+  }
+
+  .right{
+    visibility: hidden;
+  }
+}
